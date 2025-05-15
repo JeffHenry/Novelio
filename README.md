@@ -402,9 +402,10 @@ Run the test suite using the following command:
 ---
 ##  Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>MVP with ability to sign up, rate books, and search.</strike>
+- [ ] **`Task 2`**: Implement collections such as Want To Read, Read, and In Progress.
+- [ ] **`Task 3`**: Implement collections by genre (Best Books of 2024, etc).
+- [ ] **`Task 4`**: Implement backend to generate book lists using Google Books API.
 
 ---
 
@@ -453,7 +454,7 @@ Run the test suite using the following command:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 ---
 
