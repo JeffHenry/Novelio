@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useLocation
 } from "react-router-dom";
 
 // Context
@@ -23,11 +24,32 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
 import ProtectedAdminRoute from "./components/ProtectedAdminRoute";
 
+function AppWrapper() {
+  // useLocation can only be used inside components rendered within Router
+  const location = useLocation();
+
+  // List of paths where NavBar should be hidden
+  const hideNavPaths = ["/login", "/signup"];
+
+  const shouldShowNav = !hideNavPaths.includes(location.pathname);
+
+  return (
+    <>
+      {shouldShowNav && <TopNav />}
+      <main className="mt-6">
+        <Routes>
+          {/* Your routes here as before */}
+        </Routes>
+      </main>
+    </>
+  );
+}
+
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <TopNav />
+        <AppWrapper/>
         <main className="mt-6">
           <Routes>
             <Route path="/" element={<Navigate to="/books" replace />} />
